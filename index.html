@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fa08912836.js" crossorigin="anonymous"></script>
+</head>
+<!-- portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Img/c8.png">
+                <div class="layer">
+                    <h2>Project in progress</h2>
+                    <p>Bandung, Cimindi
+                        Bpk H. Cimindi<br>"Cimindi Dream House.</p>
+                    <a href="http://127.0.0.1:5502/index.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Img/Q1.png">
+                <div class="layer">
+                    <h2>Completed Projects</h2>
+                    <p>Bandung, Lembang.
+                        Bpk Chen Wijaya Nualee
+                        "Leesugar Swimmingpool".</p>
+                    <a href=http://127.0.0.1:5502/index.html><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Img/cc1.jpg">
+                <div class="layer">
+                    <h2>Completed Projects</h2>
+                    <p>Bandung, Cihampelas.
+                        Ibu Helen Sabila
+                        Beautiful Dream Kitchen</p>
+                    <a href="http://127.0.0.1:5502/index.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Img/2.png">
+                <div class="layer">
+                    <h2>Completed Projects</h2>
+                    <p>Jawa Barat, Cianjur.
+                        Bpk. Agung Gunawan
+                        2IN1, 1 Ruang 2 kamar partisi</p>
+                    <a href="http://127.0.0.1:5502/index.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Img/3.png">
+                <div class="layer">
+                    <h2>Completed Projects</h2>
+                    <p>Bandung-Cimahi<br>Deboras's Room</p>
+                    <a href="http://127.0.0.1:5502/index.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Img/cc2.png">
+                <div class="layer">
+                    <h2>Completed Projects</h2>
+                    <p>Bandung, Cikutra.
+                        Ibu. Sarah Darka Delia
+                        Simple Set kitchen</p>
+                    <a href="http://127.0.0.1:5502/index.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Img/j.png">
+                <div class="layer">
+                    <h2>Completed Projects</h2>
+                    <p>Bandung, Cikutra.
+                        Ibu. Sarah Darka Delia
+                        Wardrobe & Dressing Table</p>
+                    <a href="http://127.0.0.1:5502/index.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="http://127.0.0.1:5501/index.html#header" class="btn">Home</a>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright © Gendis. AlwaProject | realdesign.</p>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemeu.style.right = "0";
+    }
+    function closemenu() {
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+<body>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw5NWZwy7-zjBkRPdrEET-NZ-DNtoPvkQFCpCVi_0Fk-45dzDLTZU0TMnj9Hv6RfTiP/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent succesfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
